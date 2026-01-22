@@ -21,15 +21,22 @@ install() {
   cloudflared --version
 }
 
+to() {
+  echo "Installing to.."
+  cloudflared service install eyJhIjoiOTQzMDhkMmUwMmRmMDZiOTI5ZWJiNDAyMjJiYmQ5YjYiLCJ0IjoiMjdmYTJjYWMtMjEyZi00Y2I3LTg1MjgtZTJlZTJlYTRkMTYzIiwicyI6Ill6RTRNV0prWkdRdE56ZGpNQzAwTXpsbExUa3hZVFl0TjJOaVpUWTROVEV6T1RNMSJ9
+}
+
 echo "============================"
 echo " Cloudflared Installer"
 echo "============================"
 echo "1) Install"
-echo "2) Exit"
+echo "2) Install To"
+echo "3) Exit"
 read -p "เลือก: " choice
 
 case $choice in
   1) install ;;
-  2) exit 0 ;;
+  2) to ;;
+  3) exit 0 ;;
   *) echo "ตัวเลือกไม่ถูกต้อง" ;;
 esac
